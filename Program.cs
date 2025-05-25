@@ -57,6 +57,8 @@ namespace GeneticAlgorithmExample
             var finalBestIndividual = population.OrderByDescending(ind => EvaluateFitness(ind)).First();
             var (x1, x2) = DecodeIndividual(finalBestIndividual);
             Console.WriteLine($"Najlepsze rozwiązanie: x1 = {x1}, x2 = {x2}, Wartość funkcji = {EvaluateFitness(finalBestIndividual)}");
+            Console.WriteLine("Naciśnij Enter, aby zakończyć...");
+            Console.ReadLine();
         }
 
         static void ShowMenu()
